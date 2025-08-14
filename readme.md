@@ -28,7 +28,7 @@ Creates new data entries in Railway logs. Supports both JSON data and file uploa
 
 **Request:**
 
-- **Headers**: `Authorization: Bearer <token>`
+- **Headers**: `Authorization: <token>`
 - **Query Parameters**:
   - `railwayApiKey` (required if not configured globally)
   - `encryptionToken` (optional)
@@ -47,7 +47,7 @@ Retrieves data by ID from Railway logs.
 
 **Request:**
 
-- **Headers**: `Authorization: Bearer <token>`
+- **Headers**: `Authorization: <token>`
 - **Query Parameters**:
   - `id` (required): ID of the data to retrieve
   - `railwayApiKey` (required if not configured globally)
@@ -67,7 +67,7 @@ Updates existing data by ID.
 
 **Request:**
 
-- **Headers**: `Authorization: Bearer <token>`
+- **Headers**: `Authorization: <token>`
 - **Query Parameters**:
   - `id` (required): ID of the data to update
   - `railwayApiKey` (required if not configured globally)
@@ -86,7 +86,7 @@ Deletes data by ID from Railway logs.
 
 **Request:**
 
-- **Headers**: `Authorization: Bearer <token>`
+- **Headers**: `Authorization: <token>`
 - **Query Parameters**:
   - `id` (required): ID of the data to delete
   - `railwayApiKey` (required if not configured globally)
@@ -200,3 +200,6 @@ LogCar uses utility functions to load and validate environment variables:
 1. Environment variables take precedence
 2. Query parameters (like `railwayApiKey`) override global config for individual requests
 3. Default values are used when no configuration is provided
+
+#### Notes
+- Encryption on file storage hasn't been thoroughly tested
